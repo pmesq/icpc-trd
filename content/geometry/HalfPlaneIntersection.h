@@ -42,26 +42,21 @@ vector<P> hpi(vector<HP>& H) {
 	deque<HP> dq;
 	int len = 0;
 	rep(i, 0, sz(H)) {
-		while (len>1 && H[i].out(inter(dq[len-1],dq[len-2]))) {
-			dq.pop_back(); --len;
-		}
-		while (len > 1 && H[i].out(inter(dq[0], dq[1]))) {
-			dq.pop_front(); --len;
-		}
-		if (len>0 && fabsl(H[i].pq.cross(dq[len-1].pq))<eps) {
+		while (len > 1 && H[i].out(inter(dq[len-1], dq[len-2])))
+			dq.pop_back(), --len;
+		while (len > 1 && H[i].out(inter(dq[0], dq[1])))
+			dq.pop_front(), --len;
+		if (len > 0 && fabsl(H[i].pq.cross(dq[len-1].pq)) < eps) {
 			if (H[i].pq.dot(dq[len-1].pq) < 0.0) return vector<P>();
-			if (H[i].out(dq[len-1].p)) {
-				dq.pop_back(); --len;
-			} else continue;
+			if (H[i].out(dq[len-1].p)) dq.pop_back(), --len;
+			else continue;
 		}
-		dq.push_back(H[i]); ++len;
+		dq.push_back(H[i]), ++len;
 	}
-	while (len > 2 && dq[0].out(inter(dq[len-1], dq[len-2]))) {
-		dq.pop_back(); --len;
-	}
-	while (len > 2 && dq[len-1].out(inter(dq[0], dq[1]))) {
-		dq.pop_front(); --len;
-	}
+	while (len > 2 && dq[0].out(inter(dq[len-1], dq[len-2])))
+		dq.pop_back(), --len;
+	while (len > 2 && dq[len-1].out(inter(dq[0], dq[1])))
+		dq.pop_front(), --len;
 	if (len < 3) return vector<P>();
 	vector<P> ret(len);
 	rep(i, 0, len-1) ret[i] = inter(dq[i], dq[i+1]);
