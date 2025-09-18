@@ -8,7 +8,7 @@
 Computes the intersection of $n$ half-planes.
 Each half-plane is represented as the region to the left side of a vector $\vec{ab}$.
 If the half-planes are already given sorted by angle,
-the sort in the first line of hpi can be removed, making the time $O(n)$.
+the sort in the first line of {\tt hpi} can be removed, making the time $O(n)$.
 \end{minipage}
 \begin{minipage}{15mm}
 \includegraphics[width=\textwidth]{content/geometry/HalfPlaneIntersection}
