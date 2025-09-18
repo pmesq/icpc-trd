@@ -4,7 +4,6 @@
  * License: CC0
  * Source: me
  * Description: Use this for checking the {\tt hash.sh}.
- * Status: tested on https://codeforces.com/gym/106073/problem/F
  */
 #pragma once
 

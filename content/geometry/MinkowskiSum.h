@@ -1,7 +1,7 @@
 /**
  * Author: Yury Semenov
  * Date: 2020-10-04
- * License: CC BY-SA
+ * License: CC0
  * Source: https://cp-algorithms.com/geometry/minkowski.html
  * Description: Computes the Minkowski sum $C$ of two convex polygons $A$ and $B$.
  * It is proven that $C$ is a convex polygon with at most $|A| + |B|$ vertices.

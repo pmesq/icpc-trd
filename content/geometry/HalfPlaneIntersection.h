@@ -1,7 +1,7 @@
 /**
  * Author: Oscar Burga
  * Date: 2021-02-13
- * License: CC BY-SA
+ * License: CC0
  * Source: https://cp-algorithms.com/geometry/halfplane-intersection.html
  * Description:\\
 \begin{minipage}{75mm}
